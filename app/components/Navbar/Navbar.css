@@ -122,8 +122,8 @@
   color: #c8a96e;
 }
 .tbg-contact-btn {
-  background: #c8a96e;
-  color: #1e3557;
+  background: #47a4a4;
+  color: white;
   text-decoration: none;
   font-family: "Lato", sans-serif;
   font-size: 13px;
@@ -138,7 +138,7 @@
   white-space: nowrap;
 }
 .tbg-contact-btn:hover {
-  background: #e0c080;
+  background: #1e3557;
 }
 
 /* Mega Menu */
