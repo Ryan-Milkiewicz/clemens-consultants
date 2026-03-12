@@ -13,17 +13,21 @@ export default function Services() {
 
       <div className="max-w-5xl space-y-8">
         <p className="text-lg text-zinc-700">
-          At The Bonadio Group, we are led by proactive problem solvers who
-          bring a unique passion and approach to our work—as a top-ranked
-          national accounting and advisory firm, we are committed to actively
-          listening to our clients and collaborating with them to develop
-          tailored solutions for their financial and business needs.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed
+          nulla imperdiet, pharetra augue eget, efficitur orci. Ut eu orci
+          tempus, interdum ante et, eleifend mi. Duis urna velit, gravida sit
+          amet ligula et, ullamcorper sollicitudin dui. Sed ultrices iaculis
+          neque eu egestas. In laoreet elementum finibus. Integer at tincidunt
+          nisl. Duis quam tortor, malesuada sed sodales at, lobortis convallis
+          neque. Pellentesque a nulla rhoncus, faucibus ipsum non, ultrices
+          massa.
         </p>
         <p className="text-lg text-zinc-700">
-          Since 1978, clients have relied on us as trusted strategic and
-          community-focused advisors who deeply understand their businesses and
-          priorities. Our client’s success is the cornerstone of everything we
-          do.
+          Donec luctus euismod dolor, eget ullamcorper lacus fringilla eu.
+          Vivamus ac feugiat velit. Duis nec nibh non urna gravida consequat sit
+          amet at sem. Mauris vehicula facilisis arcu quis congue. Morbi
+          sollicitudin, nibh a efficitur porta, felis dui pretium nibh, ut
+          eleifend libero dui sed diam.
         </p>
       </div>
       <div className="max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
