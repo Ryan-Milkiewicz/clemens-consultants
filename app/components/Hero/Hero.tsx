@@ -1,8 +1,7 @@
-// components/Hero.tsx
 export default function Hero() {
   return (
     <section
-      className="relative w-full h-[600px] bg-cover bg-center flex items-center"
+      className="relative w-full h-[600px] bg-cover bg-center py-24"
       style={{ backgroundImage: "url('/hero-bg.jpg')" }}
     >
       {/* Dark overlay */}
