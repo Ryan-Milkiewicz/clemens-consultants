@@ -3,7 +3,7 @@ import ServiceCards from "./ServiceCards";
 export default function Services() {
   return (
     <section className="flex flex-col items-center justify-center text-center px-4 py-24">
-      <h6 className="text-lg font-semibold text-zinc-500 uppercase mb-2">
+      <h6 className="text-lg font-semibold text-[#1e3557] uppercase mb-2">
         Our Services
       </h6>
       <h2 className="text-3xl font-bold text-zinc-900 mb-3 mt-2">

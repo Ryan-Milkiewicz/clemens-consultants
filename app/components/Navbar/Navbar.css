@@ -339,6 +339,12 @@
   color: #fff;
 }
 
+.tbg-logo-img {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+}
+
 @media (max-width: 900px) {
   .tbg-nav-links,
   .tbg-nav-actions,
@@ -350,10 +356,19 @@
   }
   .tbg-main {
     padding: 0 1.5rem;
+    height: 80px;
+  }
+  .tbg-logo-img {
+    width: 170px;
   }
 }
+
 @media (max-width: 600px) {
+  .tbg-logo-img {
+    width: 140px;
+  }
   .tbg-main {
-    height: 60px;
+    height: 70px;
+    padding: 0 1rem;
   }
 }

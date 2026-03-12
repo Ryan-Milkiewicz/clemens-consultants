@@ -72,6 +72,7 @@ export default function Navbar() {
             width={200}
             height={45}
             priority
+            className="tbg-logo-img"
           />
         </a>
 
