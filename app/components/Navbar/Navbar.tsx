@@ -4,7 +4,6 @@ import Image from "next/image";
 import { NAV_ITEMS } from "./NavLinks";
 import { SearchIcon, ChevronDown, HamburgerIcon } from "./NavbarIcons";
 import "./Navbar.css";
-//import Logo from "../../assets/logo.svg";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
