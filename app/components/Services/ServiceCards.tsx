@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { urlFor } from "@/lib/sanity";
 
 type ServiceCardProps = {
   title: string;
@@ -16,50 +17,64 @@ export default function ServiceCards({
   closingStatement,
 }: ServiceCardProps) {
   return (
-    <div className="flex flex-col gap-3 p-6 rounded-lg border border-zinc-200 text-left">
-      <h3 className="text-xl font-bold text-[#1e3557]">{title}</h3>
-      <p className="text-zinc-600 text-md">{description}</p>
-
-      {items?.length > 0 && (
-        <div className="flex flex-col gap-2">
-          <p className="text-sm font-semibold text-zinc-700">
-            Services include:
-          </p>
-          <ul className="list-disc list-inside text-md text-zinc-600 space-y-1">
-            {items.map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
-          </ul>
+    <div className="group max-w-sm h-full" style={{ perspective: "1200px" }}>
+      <div
+        className="relative w-full h-full transition-transform duration-700 group-hover:[transform:rotateY(180deg)]"
+        style={{ transformStyle: "preserve-3d" }}
+      >
+        <div
+          className="flex flex-col h-full shadow-[0_10px_30px_rgba(0,0,0,0.25)] bg-white rounded-b-3xl"
+          style={{ backfaceVisibility: "hidden" }}
+        >
+          <div className="relative h-70 overflow-hidden">
+            <Image
+              width={327}
+              height={280}
+              src={photo ? urlFor(photo) : "/tax.webp"}
+              alt={title}
+              className="w-full h-full object-cover"
+              priority
+            />
+          </div>
+          <div className="flex-1 p-6 bg-zinc-200 rounded-b-3xl flex flex-col">
+            <h3 className="text-lg text-left font-bold text-[#1e3557] mb-2">
+              {title} <span className="text-[#c8a96e]">&rsaquo;</span>
+            </h3>
+            <p className="text-left text-zinc-600 text-md leading-relaxed">
+              {description}
+            </p>
+          </div>
         </div>
-      )}
 
-      {closingStatement && (
-        <p className="text-sm text-zinc-500 italic mt-2">{closingStatement}</p>
-      )}
+        <div
+          className="absolute inset-0 flex flex-col justify-between bg-[#1e3557] rounded-b-3xl p-6 shadow-[0_10px_30px_rgba(0,0,0,0.25)]"
+          style={{
+            backfaceVisibility: "hidden",
+            transform: "rotateY(180deg)",
+          }}
+        >
+          <div>
+            <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
+            <p className="text-zinc-300 text-md leading-relaxed mb-4">
+              {description}
+            </p>
+            <ul className="space-y-2">
+              {items.map((item, i) => (
+                <li
+                  key={i}
+                  className="flex items-start gap-2 text-zinc-200 text-sm"
+                >
+                  <span className="text-[#c8a96e] mt-0.5">›</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <p className="text-[#c8a96e] text-sm font-semibold mt-4">
+            {closingStatement}
+          </p>
+        </div>
+      </div>
     </div>
-    // <div className="shadow-[0_10px_30px_rgba(0,0,0,0.25)] overflow-hidden max-w-sm bg-white rounded-b-3xl transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] hover:-translate-y-1">
-    //   {/* Image */}
-    //   <div className="relative h-70 overflow-hidden">
-    //     <Image
-    //       width={327}
-    //       height={280}
-    //       src="/tax.webp"
-    //       alt="Advisory & Consulting"
-    //       className="w-full h-full object-cover"
-    //       priority
-    //     />
-    //   </div>
-
-    //   {/* Content */}
-    //   <div className="p-6 bg-zinc-200">
-    //     <h3 className="text-lg text-left font-bold text-[#1e3557] mb-2">
-    //       Advisory & Consulting <span className="text-[#c8a96e]">&rsaquo;</span>
-    //     </h3>
-    //     <p className="text-left text-zinc-600 text-md leading-relaxed">
-    //       Our team of experts in Advisory & Consulting is here to offer unique
-    //       solutions that create and safeguard value in your business.
-    //     </p>
-    //   </div>
-    // </div>
   );
 }
