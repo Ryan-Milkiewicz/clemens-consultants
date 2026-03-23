@@ -5,6 +5,7 @@ type ServiceCardProps = {
   title: string;
   description: string;
   photo: any;
+  includes: string;
   items: string[];
   closingStatement: string;
 };
@@ -13,6 +14,7 @@ export default function ServiceCards({
   title,
   description,
   photo,
+  includes,
   items,
   closingStatement,
 }: ServiceCardProps) {
@@ -55,10 +57,10 @@ export default function ServiceCards({
         >
           <div>
             <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
-            <p className="text-zinc-300 text-md leading-relaxed mb-4">
-              {description}
-            </p>
             <ul className="space-y-2">
+              <li className="flex items-start gap-2 text-zinc-300 text-sm font-semibold">
+                {includes}
+              </li>
               {items.map((item, i) => (
                 <li
                   key={i}

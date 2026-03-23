@@ -21,6 +21,7 @@ export type ServicesPage = {
     title: string;
     description: string;
     photo: any;
+    includes: string;
     items: string[];
     closingStatement: string;
   }[];

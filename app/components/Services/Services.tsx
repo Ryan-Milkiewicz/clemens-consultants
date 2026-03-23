@@ -9,6 +9,7 @@ const SERVICES_QUERY = `*[_type == "services-page"][0]{
       title,
       description,
       photo,
+      includes,
       items,
       closingStatement
     }
@@ -45,6 +46,7 @@ export default async function Services() {
             title={section.title}
             description={section.description}
             photo={section.photo}
+            includes={section.includes}
             items={section.items}
             closingStatement={section.closingStatement}
           />
