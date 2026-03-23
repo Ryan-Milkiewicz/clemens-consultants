@@ -17,8 +17,6 @@ export default async function Hero() {
     {},
     options,
   );
-
-  console.log(heroPageQuery);
   return (
     <section
       className="relative w-full h-[750px] bg-cover bg-center py-24"

@@ -13,3 +13,15 @@ export type HeroSection = {
     href: string;
   };
 };
+
+export type ServicesPage = {
+  heading: string;
+  subheading: string;
+  sections: {
+    title: string;
+    description: string;
+    photo: any;
+    items: string[];
+    closingStatement: string;
+  }[];
+};
