@@ -18,14 +18,14 @@ export default function ServiceCards({
   return (
     <div className="flex flex-col gap-3 p-6 rounded-lg border border-zinc-200 text-left">
       <h3 className="text-xl font-bold text-[#1e3557]">{title}</h3>
-      <p className="text-zinc-600 text-sm">{description}</p>
+      <p className="text-zinc-600 text-md">{description}</p>
 
       {items?.length > 0 && (
         <div className="flex flex-col gap-2">
           <p className="text-sm font-semibold text-zinc-700">
             Services include:
           </p>
-          <ul className="list-disc list-inside text-sm text-zinc-600 space-y-1">
+          <ul className="list-disc list-inside text-md text-zinc-600 space-y-1">
             {items.map((item, i) => (
               <li key={i}>{item}</li>
             ))}
