@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const FOOTER_LINKS = [
   {
@@ -11,35 +12,26 @@ const FOOTER_LINKS = [
       { label: "Wealth Management", href: "/services/wealth" },
     ],
   },
-  {
-    title: "Industries",
-    links: [
-      { label: "Construction & Real Estate", href: "/industries/construction" },
-      { label: "Financial Services", href: "/industries/financial" },
-      { label: "Healthcare Services", href: "/industries/healthcare" },
-      { label: "Human Services", href: "/industries/human" },
-      { label: "Nonprofit Organizations", href: "/industries/nonprofit" },
-    ],
-  },
+  // {
+  //   title: "Industries",
+  //   links: [
+  //     { label: "Construction & Real Estate", href: "/industries/construction" },
+  //     { label: "Financial Services", href: "/industries/financial" },
+  //     { label: "Healthcare Services", href: "/industries/healthcare" },
+  //     { label: "Human Services", href: "/industries/human" },
+  //     { label: "Nonprofit Organizations", href: "/industries/nonprofit" },
+  //   ],
+  // },
   {
     title: "About",
     links: [
       { label: "Our Firm", href: "/about" },
       { label: "Leadership", href: "/about/leadership" },
-      { label: "Careers", href: "/careers" },
-      { label: "News & Insights", href: "/news" },
-      { label: "Events", href: "/events" },
     ],
   },
   {
     title: "Client Resources",
-    links: [
-      { label: "Client Portal", href: "/client-portal" },
-      { label: "Submit RFP", href: "/submit-rfp" },
-      { label: "Subscribe", href: "/subscribe" },
-      { label: "Privacy Policy", href: "/privacy" },
-      { label: "Terms of Use", href: "/terms" },
-    ],
+    links: [{ label: "Client Portal", href: "/client-portal" }],
   },
 ];
 
@@ -103,12 +95,6 @@ export default function Footer() {
             >
               Contact Us
             </a>
-            {/* <a
-              href="/submit-rfp"
-              className="border border-white/30 hover:border-[#c8a96e] hover:text-[#c8a96e] text-white text-xs font-bold tracking-widest uppercase px-6 py-3 rounded-full transition-colors duration-200 whitespace-nowrap"
-            >
-              Submit RFP
-            </a> */}
           </div>
         </div>
       </div>
@@ -251,8 +237,30 @@ export default function Footer() {
             © {new Date().getFullYear()} Clemens Consultants. All rights
             reserved.
           </p>
+          {/* <p className="text-white/40 text-xs">
+            Developed by {""}
+            <Link
+              href="https://rmwebsolutions.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="fw-bold"
+            >
+              RM Web Solutions
+            </Link>
+          </p> */}
           <div className="flex gap-6">
-            {["Privacy Policy", "Terms of Use", "Accessibility"].map((item) => (
+            <p className="text-white/40 text-xs">
+              Developed by {""}
+              <Link
+                href="https://rmwebsolutions.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="fw-bold"
+              >
+                RM Web Solutions
+              </Link>
+            </p>
+            {/* {["Privacy Policy", "Terms of Use", "Accessibility"].map((item) => (
               <a
                 key={item}
                 href={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
@@ -260,7 +268,7 @@ export default function Footer() {
               >
                 {item}
               </a>
-            ))}
+            ))} */}
           </div>
         </div>
       </div>
