@@ -4,6 +4,7 @@ import Image from "next/image";
 import { NAV_ITEMS } from "./NavLinks";
 import { SearchIcon, ChevronDown, HamburgerIcon } from "./NavbarIcons";
 import "./Navbar.css";
+import Link from "next/link";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -14,11 +15,8 @@ export default function Navbar() {
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const UTILITY_LINKS = [
-    { label: "Events", href: "/events" },
-    { label: "Subscribe", href: "/subscribe" },
-    { label: "Client Portal", href: "/client-portal" },
-    { label: "Submit RFP", href: "/submit-rfp" },
-    { label: "(877) 917-3077", href: "tel:8779173077" },
+    { label: "(518) 960-9227", href: "tel:5189609227" },
+    { label: "Client Portal", href: "/" },
   ];
 
   useEffect(() => {
@@ -54,9 +52,9 @@ export default function Navbar() {
       {/* Utility Bar */}
       <div className="tbg-utility">
         {UTILITY_LINKS.map((l) => (
-          <a key={l.label} href={l.href}>
+          <Link key={l.label} href={l.href}>
             {l.label}
-          </a>
+          </Link>
         ))}
       </div>
 
@@ -85,17 +83,22 @@ export default function Navbar() {
               onMouseEnter={() => handleMouseEnter(item.label)}
               onMouseLeave={handleMouseLeave}
             >
-              <a
+              <Link
                 href={item.href}
                 className={`tbg-nav-trigger${activeMenu === item.label ? " active" : ""}`}
                 aria-expanded={activeMenu === item.label}
-                onClick={(e) => item.sections?.length && e.preventDefault()}
+                onClick={(e) => {
+                  if (item.sections?.length) {
+                    // allow navigation, just close the menu
+                    setActiveMenu(null);
+                  }
+                }}
               >
                 {item.label}
                 {item.sections?.length > 0 && (
                   <ChevronDown open={activeMenu === item.label} />
                 )}
-              </a>
+              </Link>
             </div>
           ))}
         </div>
@@ -137,9 +140,6 @@ export default function Navbar() {
           >
             <div className="tbg-mega-intro">
               <p className="tbg-mega-intro-text">{activeItem.description}</p>
-              <a href={activeItem.href} className="tbg-mega-intro-link">
-                View All {activeItem.label} →
-              </a>
             </div>
             <div className="tbg-mega-cols">
               {activeItem.sections.map((section) => (

@@ -103,12 +103,12 @@ export default function Footer() {
             >
               Contact Us
             </a>
-            <a
+            {/* <a
               href="/submit-rfp"
               className="border border-white/30 hover:border-[#c8a96e] hover:text-[#c8a96e] text-white text-xs font-bold tracking-widest uppercase px-6 py-3 rounded-full transition-colors duration-200 whitespace-nowrap"
             >
               Submit RFP
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
@@ -190,7 +190,7 @@ export default function Footer() {
                 href="tel:8779173077"
                 className="text-white text-sm font-semibold hover:text-[#c8a96e] transition-colors"
               >
-                (877) 917-3077
+                (518) 960-9227
               </a>
             </div>
           </div>
@@ -212,10 +212,10 @@ export default function Footer() {
                 Email
               </p>
               <a
-                href="mailto:info@clemens.com"
+                href="mailto:info@clemensconsultants.com"
                 className="text-white text-sm font-semibold hover:text-[#c8a96e] transition-colors"
               >
-                info@clemens.com
+                info@clemensconsultants.com
               </a>
             </div>
           </div>
@@ -237,7 +237,7 @@ export default function Footer() {
                 Office
               </p>
               <p className="text-white text-sm font-semibold">
-                123 Main St, New York, NY
+                54 1st Dyke Rd Unit 2, Averill Park, NY 12018
               </p>
             </div>
           </div>
