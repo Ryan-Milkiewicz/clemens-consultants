@@ -169,4 +169,9 @@ export const NAV_ITEMS = [
     href: "/blog",
     sections: [],
   },
+  {
+    label: "Contact",
+    href: "/contact",
+    sections: [],
+  },
 ];
