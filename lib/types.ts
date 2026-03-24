@@ -24,6 +24,15 @@ export type AboutPage = {
   };
 };
 
+export type OurApproachPage = {
+  heading: string;
+  subheading?: string;
+  principles?: {
+    title: string;
+    description?: string;
+  }[];
+};
+
 export type OurFirmPage = {
   heading: string;
   subheading?: string;

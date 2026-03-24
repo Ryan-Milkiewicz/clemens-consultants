@@ -70,6 +70,11 @@ export const NAV_ITEMS = [
       },
     ],
   },
+  {
+    label: "Our Approach",
+    href: "/our-approach",
+    sections: [],
+  },
   // {
   //   label: "Industries",
   //   href: "/industries",
