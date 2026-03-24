@@ -26,3 +26,13 @@ export type ServicesPage = {
     closingStatement: string;
   }[];
 };
+
+export type IndustrySection = {
+  heading: string;
+  subheading: string;
+  sections: {
+    title: string;
+    description: string;
+    photo: string;
+  }[];
+};
