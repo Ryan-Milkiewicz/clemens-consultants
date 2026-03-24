@@ -22,12 +22,6 @@ export default function IndustriesClient({ data }: { data: IndustrySection }) {
           <p className="text-[#4a5568] text-[15px] leading-relaxed flex-1">
             {data.subheading}
           </p>
-          {/* <a
-            href="/industries"
-            className="flex-shrink-0 bg-[#c8a96e] hover:bg-[#b8945a] text-white text-xs font-bold tracking-widest uppercase px-6 py-3 rounded-full transition-colors duration-200 whitespace-nowrap"
-          >
-            VIEW ALL INDUSTRIES
-          </a> */}
         </div>
       </div>
 
