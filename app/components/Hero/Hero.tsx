@@ -1,4 +1,4 @@
-import { client } from "@/lib/sanity";
+import { client, urlFor } from "@/lib/sanity";
 import { HeroSection } from "@/lib/types";
 
 const HERO_QUERY = `*[_type == "hero-section"][0]{
@@ -20,7 +20,7 @@ export default async function Hero() {
   return (
     <section
       className="relative w-full min-h-[700px] md:h-[750px] bg-cover bg-center py-12 md:py-24"
-      style={{ backgroundImage: "url('/hero-bg.jpg')" }}
+      style={{ backgroundImage: `url(${urlFor(heroPageQuery.image)})` }}
     >
       <div className="absolute inset-0 bg-black/50" />
 
