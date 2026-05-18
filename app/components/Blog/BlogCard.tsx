@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function BlogCard() {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden">
+    <div className="max-w-md bg-white rounded-lg shadow-md overflow-hidden">
       {/* <Image
         src="/path/to/blog-image.jpg"
         alt="Blog Post Title"
@@ -20,6 +20,9 @@ export default function BlogCard() {
         <a href="#" className="text-[#47a4a4] font-semibold hover:underline">
           Read More
         </a>
+      </div>
+      <div className="p-3 border-t border-gray-300 bg-gray-100">
+        <p className="text-sm text-gray-500">March 10, 2026</p>
       </div>
     </div>
   );
