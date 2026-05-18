@@ -5,29 +5,18 @@ const FOOTER_LINKS = [
   {
     title: "Services",
     links: [
-      { label: "Audit & Assurance", href: "/services/audit" },
-      { label: "Tax Services", href: "/services/tax" },
-      { label: "Advisory & Consulting", href: "/services/advisory" },
-      { label: "Accounting & Outsourcing", href: "/services/accounting" },
-      { label: "Wealth Management", href: "/services/wealth" },
+      { label: "Tax Preparation and Planning", href: "/services/audit" },
+      { label: "Business Advisory & Consulting", href: "/services/tax" },
+      { label: "Audit & Assurance Services", href: "/services/advisory" },
+      {
+        label: "Financial Statement Preparation",
+        href: "/services/accounting",
+      },
     ],
   },
-  // {
-  //   title: "Industries",
-  //   links: [
-  //     { label: "Construction & Real Estate", href: "/industries/construction" },
-  //     { label: "Financial Services", href: "/industries/financial" },
-  //     { label: "Healthcare Services", href: "/industries/healthcare" },
-  //     { label: "Human Services", href: "/industries/human" },
-  //     { label: "Nonprofit Organizations", href: "/industries/nonprofit" },
-  //   ],
-  // },
   {
     title: "About",
-    links: [
-      { label: "Our Firm", href: "/about" },
-      { label: "Leadership", href: "/about/leadership" },
-    ],
+    links: [{ label: "Our Firm", href: "/about" }],
   },
   {
     title: "Client Resources",
@@ -85,7 +74,7 @@ export default function Footer() {
               Ready to get started?
             </p>
             <p className="text-white text-xl font-bold">
-              Let's talk about how we can help your organization.
+              Let&apos;s talk about how we can help your organization.
             </p>
           </div>
           <div className="flex gap-3 flex-shrink-0">
@@ -104,7 +93,7 @@ export default function Footer() {
         <div className="grid grid-cols-5 gap-10 max-lg:grid-cols-2 max-md:grid-cols-1">
           {/* Brand Column */}
           <div className="col-span-1 max-lg:col-span-2 max-md:col-span-1">
-            <a href="/" className="inline-block mb-5">
+            <Link href="/" className="inline-block mb-5">
               <Image
                 src="/clemens-consultants-logo.png"
                 alt="Clemens Consultants"
@@ -112,7 +101,7 @@ export default function Footer() {
                 height={40}
                 className="brightness-0 invert"
               />
-            </a>
+            </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
               Providing exceptional accounting, tax, and advisory services to
               businesses and individuals across the region.
