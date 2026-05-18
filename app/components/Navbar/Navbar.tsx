@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { NAV_ITEMS } from "./NavLinks";
-import { SearchIcon, ChevronDown, HamburgerIcon } from "./NavbarIcons";
+import { ChevronDown, HamburgerIcon } from "./NavbarIcons";
 import "./Navbar.css";
 import Link from "next/link";
 
@@ -63,7 +63,11 @@ export default function Navbar() {
         className="tbg-main"
         style={{ boxShadow: scrolled ? "0 2px 20px rgba(0,0,0,0.3)" : "none" }}
       >
-        <a href="/" className="tbg-logo" aria-label="Clemens Consultants Home">
+        <Link
+          href="/"
+          className="tbg-logo"
+          aria-label="Clemens Consultants Home"
+        >
           <Image
             src="/clemens-consultants-logo.png"
             alt="Clemens Consultants Logo"
@@ -72,7 +76,7 @@ export default function Navbar() {
             priority
             className="tbg-logo-img"
           />
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <div className="tbg-nav-links">
@@ -104,9 +108,6 @@ export default function Navbar() {
         </div>
 
         <div className="tbg-nav-actions">
-          <button className="tbg-search-btn" aria-label="Search">
-            <SearchIcon />
-          </button>
           <a href="/contact" className="tbg-contact-btn">
             Contact
           </a>
@@ -147,7 +148,7 @@ export default function Navbar() {
                   <a href={section.href} className="tbg-mega-col-title">
                     {section.title}
                   </a>
-                  {section.links.map((link) => (
+                  {/* {section.links.map((link) => (
                     <a
                       key={link.label}
                       href={link.href}
@@ -155,7 +156,7 @@ export default function Navbar() {
                     >
                       {link.label}
                     </a>
-                  ))}
+                  ))} */}
                 </div>
               ))}
             </div>
@@ -198,7 +199,7 @@ export default function Navbar() {
                     >
                       {section.title} Overview
                     </a>
-                    {section.links.map((link) => (
+                    {/* {section.links.map((link) => (
                       <a
                         key={link.label}
                         href={link.href}
@@ -206,7 +207,7 @@ export default function Navbar() {
                       >
                         {link.label}
                       </a>
-                    ))}
+                    ))} */}
                   </div>
                 ))}
               </div>

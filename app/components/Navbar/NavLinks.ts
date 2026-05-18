@@ -6,67 +6,67 @@ export const NAV_ITEMS = [
       "We provide tailor-made solutions to meet the unique needs of your business.",
     sections: [
       {
-        title: "Advisory & Consulting",
+        title: "Tax Preparation and Planning",
         href: "/services/advisory-consulting",
-        links: [
-          {
-            label: "Advisory Services",
-            href: "/services/advisory-consulting/advisory-services",
-          },
-          {
-            label: "Corporate Finance",
-            href: "/services/advisory-consulting/corporate-finance",
-          },
-          {
-            label: "FoxPointe Solutions",
-            href: "/services/advisory-consulting/foxpointe-solutions",
-          },
-          {
-            label: "Outsource Accounting & Finance",
-            href: "/services/advisory-consulting/outsource-accounting",
-          },
-        ],
+        // links: [
+        //   {
+        //     label: "Advisory Services",
+        //     href: "/services/advisory-consulting/advisory-services",
+        //   },
+        //   {
+        //     label: "Corporate Finance",
+        //     href: "/services/advisory-consulting/corporate-finance",
+        //   },
+        //   {
+        //     label: "FoxPointe Solutions",
+        //     href: "/services/advisory-consulting/foxpointe-solutions",
+        //   },
+        //   {
+        //     label: "Outsource Accounting & Finance",
+        //     href: "/services/advisory-consulting/outsource-accounting",
+        //   },
+        // ],
       },
       {
-        title: "Small Business Advisory",
+        title: "Business Advisory & Consulting",
         href: "/services/small-business-advisory",
-        links: [],
+        // links: [],
       },
       {
-        title: "Assurance",
+        title: "Audit & Assurance Services",
         href: "/services/assurance",
-        links: [
-          {
-            label: "Employee Benefit Audit",
-            href: "/services/assurance/employee-benefit-audit",
-          },
-          {
-            label: "Financial Statement Audit",
-            href: "/services/assurance/financial-statement-audit",
-          },
-        ],
+        // links: [
+        //   {
+        //     label: "Employee Benefit Audit",
+        //     href: "/services/assurance/employee-benefit-audit",
+        //   },
+        //   {
+        //     label: "Financial Statement Audit",
+        //     href: "/services/assurance/financial-statement-audit",
+        //   },
+        // ],
       },
       {
-        title: "Tax",
+        title: "Financial Statement Preparation",
         href: "/services/tax",
-        links: [
-          {
-            label: "International Tax Services",
-            href: "/services/tax/international-tax-services",
-          },
-          {
-            label: "State & Local Taxes",
-            href: "/services/tax/state-local-taxes",
-          },
-          {
-            label: "Tax Credits & Tax Incentives",
-            href: "/services/tax/tax-credits-tax-incentives",
-          },
-          {
-            label: "Tax Planning & Compliance",
-            href: "/services/tax/tax-planning-compliance",
-          },
-        ],
+        // links: [
+        //   {
+        //     label: "International Tax Services",
+        //     href: "/services/tax/international-tax-services",
+        //   },
+        //   {
+        //     label: "State & Local Taxes",
+        //     href: "/services/tax/state-local-taxes",
+        //   },
+        //   {
+        //     label: "Tax Credits & Tax Incentives",
+        //     href: "/services/tax/tax-credits-tax-incentives",
+        //   },
+        //   {
+        //     label: "Tax Planning & Compliance",
+        //     href: "/services/tax/tax-planning-compliance",
+        //   },
+        // ],
       },
     ],
   },
@@ -174,9 +174,9 @@ export const NAV_ITEMS = [
     href: "/blog",
     sections: [],
   },
-  {
-    label: "Contact",
-    href: "/contact",
-    sections: [],
-  },
+  // {
+  //   label: "Contact",
+  //   href: "/contact",
+  //   sections: [],
+  // },
 ];
