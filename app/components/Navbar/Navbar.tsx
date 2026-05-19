@@ -153,55 +153,71 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`tbg-mobile-menu${mobileOpen ? " open" : ""}`}>
-        {NAV_ITEMS.map((item) => (
-          <div key={item.label} className="tbg-mobile-item">
-            <button
-              className="tbg-mobile-trigger"
-              onClick={() =>
-                setMobileExpanded((e) => (e === item.label ? null : item.label))
-              }
-              aria-expanded={mobileExpanded === item.label}
-            >
-              {item.label}
-              {item.sections?.length > 0 && (
-                <ChevronDown open={mobileExpanded === item.label} />
-              )}
-            </button>
-            {item.sections?.length > 0 && (
-              <div
-                className={`tbg-mobile-submenu${mobileExpanded === item.label ? " open" : ""}`}
-              >
-                {item.sections.map((section) => (
-                  <div key={section.title}>
-                    <div className="tbg-mobile-section-title">
-                      {section.title}
-                    </div>
-                    <a
-                      href={section.href}
-                      className="tbg-mobile-sublink"
-                      style={{
-                        fontWeight: 600,
-                        color: "rgba(255,255,255,0.9)",
-                      }}
-                    >
-                      {section.title} Overview
-                    </a>
-                  </div>
-                ))}
+      {/* Mobile Menu */}
+      {mobileOpen && (
+        <div className="md:hidden bg-[#1e3557] border-t border-white/10 max-h-[calc(100vh-60px)] overflow-y-auto">
+          {NAV_ITEMS.map((item) => (
+            <div key={item.label} className="border-b border-white/10">
+              <div className="flex items-center justify-between">
+                <Link
+                  href={item.href}
+                  className="flex-1 px-6 py-4 text-white/90 text-sm font-semibold tracking-widest uppercase hover:text-[#c8a96e] hover:bg-white/5 transition-colors"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {item.label}
+                </Link>
+                {item.sections?.length > 0 && (
+                  <button
+                    className="px-4 py-4 text-white/90 hover:text-[#c8a96e] transition-colors"
+                    onClick={() =>
+                      setMobileExpanded((e) =>
+                        e === item.label ? null : item.label,
+                      )
+                    }
+                  >
+                    <ChevronDown open={mobileExpanded === item.label} />
+                  </button>
+                )}
               </div>
-            )}
+
+              {item.sections?.length > 0 && mobileExpanded === item.label && (
+                <div className="bg-black/20 pb-4">
+                  {item.sections.map((section) => (
+                    <div key={section.title}>
+                      <div className="text-[#c8a96e] text-[11px] font-bold tracking-widest uppercase px-6 pt-3 pb-1.5">
+                        {section.title}
+                      </div>
+                      <Link
+                        href={section.href}
+                        className="block text-white/75 text-sm px-8 py-1.5 hover:text-white transition-colors font-semibold"
+                        onClick={() => setMobileOpen(false)}
+                      >
+                        {section.title} Overview
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+          <div className="flex gap-3 p-6">
+            <Link
+              href="/contact"
+              className="flex-1 text-center bg-[#c8a96e] text-[#1e3557] text-sm font-bold tracking-widest uppercase py-3 rounded-sm"
+              onClick={() => setMobileOpen(false)}
+            >
+              Contact Us
+            </Link>
+            <Link
+              href="/client-portal"
+              className="flex-1 text-center bg-white/10 text-white text-sm font-bold tracking-widest uppercase py-3 rounded-sm"
+              onClick={() => setMobileOpen(false)}
+            >
+              Client Portal
+            </Link>
           </div>
-        ))}
-        <div className="tbg-mobile-contact">
-          <a href="/contact" className="primary">
-            Contact Us
-          </a>
-          <a href="/client-portal" className="secondary">
-            Client Portal
-          </a>
         </div>
-      </div>
+      )}
     </nav>
   );
 }
