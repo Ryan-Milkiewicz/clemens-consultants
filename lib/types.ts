@@ -1,4 +1,4 @@
-import type { Image } from "sanity";
+import type { Image } from "@sanity/types";
 import type { PortableTextBlock } from "next-sanity";
 
 export type HeroSection = {
