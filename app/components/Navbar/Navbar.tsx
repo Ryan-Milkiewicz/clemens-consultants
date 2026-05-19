@@ -153,7 +153,6 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      {/* Mobile Menu */}
       {mobileOpen && (
         <div className="md:hidden bg-[#1e3557] border-t border-white/10 max-h-[calc(100vh-60px)] overflow-y-auto">
           {NAV_ITEMS.map((item) => (

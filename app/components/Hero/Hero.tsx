@@ -35,7 +35,7 @@ export default async function Hero() {
         <p className="text-sm md:text-base text-white/70 max-w-2xl leading-relaxed">
           {heroPageQuery.midlineText}
         </p>
-        <div className="flex flex-wrap gap-3 md:gap-4">
+        <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
           {heroPageQuery.primaryCta && (
             <a
               href={heroPageQuery.primaryCta.href}
