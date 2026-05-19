@@ -25,6 +25,10 @@ const FOOTER_LINKS = [
     title: "Client Resources",
     links: [{ label: "Client Portal", href: "/client-portal" }],
   },
+  {
+    title: "Contact Us",
+    links: [{ label: "Contact Us", href: "/contact" }],
+  },
 ];
 
 const SOCIAL_LINKS = [

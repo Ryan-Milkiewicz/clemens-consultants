@@ -16,7 +16,7 @@ export default function Navbar() {
 
   const UTILITY_LINKS = [
     { label: "(518) 960-9227", href: "tel:5189609227" },
-    { label: "Client Portal", href: "/" },
+    // { label: "Client Portal", href: "/" },
   ];
 
   useEffect(() => {
