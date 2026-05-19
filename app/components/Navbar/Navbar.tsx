@@ -145,15 +145,6 @@ export default function Navbar() {
                   <a href={section.href} className="tbg-mega-col-title">
                     {section.title}
                   </a>
-                  {/* {section.links.map((link) => (
-                    <a
-                      key={link.label}
-                      href={link.href}
-                      className="tbg-mega-col-link"
-                    >
-                      {link.label}
-                    </a>
-                  ))} */}
                 </div>
               ))}
             </div>
@@ -196,15 +187,6 @@ export default function Navbar() {
                     >
                       {section.title} Overview
                     </a>
-                    {/* {section.links.map((link) => (
-                      <a
-                        key={link.label}
-                        href={link.href}
-                        className="tbg-mobile-sublink"
-                      >
-                        {link.label}
-                      </a>
-                    ))} */}
                   </div>
                 ))}
               </div>
