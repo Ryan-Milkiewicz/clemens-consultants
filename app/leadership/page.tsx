@@ -1,36 +1,12 @@
-import { client, urlFor } from "@/lib/sanity";
-import { LeadershipPage } from "@/lib/types";
+import { getLeadershipPageQuery } from "@/lib/queries";
+import { urlFor } from "@/lib/sanity";
 import Image from "next/image";
 
-const LEADERSHIP_QUERY = `*[_type == "leadership"][0] {
-  pageTitle,
-  teamMembers[] {
-    name,
-    credentials,
-    role,
-    bio,
-    experienceAreas,
-    closingStatement,
-    photo {
-      asset-> {
-        url
-      }
-    }
-  }
-}`;
-
-const options = { next: { revalidate: 30 } };
-
 export default async function Leadership() {
-  const data = await client.fetch<LeadershipPage>(
-    LEADERSHIP_QUERY,
-    {},
-    options,
-  );
+  const data = await getLeadershipPageQuery();
 
   return (
     <section className="bg-[#f4f5f7] px-20 py-16 max-md:px-6 max-md:py-10">
-      {/* Header */}
       <div className="mb-12">
         <p className="text-[#47a4a4] text-sm font-semibold tracking-widest uppercase mb-3">
           OUR TEAM
@@ -41,14 +17,12 @@ export default async function Leadership() {
         <div className="w-12 h-[3px] bg-[#c8a96e] rounded-full" />
       </div>
 
-      {/* Team Members */}
       <div className="flex flex-col gap-12">
         {data.teamMembers?.map((member, index) => (
           <div
             key={index}
             className="flex gap-10 bg-white rounded-xl shadow-sm p-8 max-md:flex-col max-md:gap-6"
           >
-            {/* Photo */}
             {member.photo ? (
               <div className="flex-none w-48 h-56 relative rounded-lg overflow-hidden max-md:w-full max-md:h-56">
                 <Image
@@ -65,9 +39,7 @@ export default async function Leadership() {
               </div>
             )}
 
-            {/* Info */}
             <div className="flex flex-col justify-start flex-1">
-              {/* Name + Role */}
               <div className="mb-4">
                 <h2 className="text-[#1e3557] text-2xl font-extrabold">
                   {member.name}
@@ -85,14 +57,12 @@ export default async function Leadership() {
                 <div className="w-8 h-[3px] bg-[#c8a96e] rounded-full mt-3" />
               </div>
 
-              {/* Bio */}
               {member.bio && (
                 <p className="text-[#4a5568] text-[15px] leading-relaxed mb-5">
                   {member.bio}
                 </p>
               )}
 
-              {/* Experience Areas */}
               {member.experienceAreas && member.experienceAreas.length > 0 && (
                 <div className="mb-5">
                   <p className="text-[#1e3557] text-sm font-bold uppercase tracking-widest mb-2">
@@ -112,7 +82,6 @@ export default async function Leadership() {
                 </div>
               )}
 
-              {/* Closing Statement */}
               {member.closingStatement && (
                 <p className="text-[#4a5568] text-[15px] leading-relaxed italic border-l-4 border-[#c8a96e] pl-4">
                   {member.closingStatement}

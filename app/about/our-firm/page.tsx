@@ -1,27 +1,13 @@
-import { client, urlFor } from "@/lib/sanity";
-import { OurFirmPage } from "@/lib/types";
+import { getOurFirmQuery } from "@/lib/queries";
+import { urlFor } from "@/lib/sanity";
 import Image from "next/image";
 
-const OUR_FIRM_QUERY = `*[_type == "our-firm"][0] {
-  heading,
-  subheading,
-  servicesList,
-  closingStatement,
-  image {
-    asset-> {
-      url
-    }
-  }
-}`;
-const options = { next: { revalidate: 30 } };
-
 export default async function OurFirm() {
-  const data = await client.fetch<OurFirmPage>(OUR_FIRM_QUERY, {}, options);
+  const data = await getOurFirmQuery();
 
   return (
     <section className="min-h-screen bg-[#f4f5f7]">
       <div className="flex min-h-[600px] max-md:flex-col">
-        {/* Left — Image */}
         {data.image && (
           <div className="flex-none w-1/2 max-md:w-full max-md:h-64 relative">
             <Image
@@ -35,7 +21,6 @@ export default async function OurFirm() {
           </div>
         )}
 
-        {/* Right — Text */}
         <div className="flex-1 flex flex-col justify-center px-16 py-20 max-md:px-6 max-md:py-10 bg-white">
           <p className="text-[#47a4a4] text-sm font-semibold tracking-widest uppercase mb-3">
             OUR FIRM
