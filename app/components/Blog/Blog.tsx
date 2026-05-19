@@ -1,6 +1,10 @@
 import BlogCard from "./BlogCard";
+import { getTop3BlogPosts } from "@/lib/queries";
 
-export default function Blog() {
+export default async function Blog() {
+  const featuredPosts = await getTop3BlogPosts();
+
+  console.log("blogPosts:", JSON.stringify(featuredPosts, null, 2));
   return (
     <section className="flex flex-col items-center justify-center text-center px-4 py-16">
       <h6 className="text-lg font-semibold text-[#47a4a4] uppercase mb-2">
@@ -16,9 +20,9 @@ export default function Blog() {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
+        {featuredPosts.map((post) => (
+          <BlogCard key={post._id} post={post} />
+        ))}
       </div>
     </section>
   );

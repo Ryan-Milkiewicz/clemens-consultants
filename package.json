@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@sanity/image-url": "^2.0.3",
+    "@sanity/types": "^5.25.1",
+    "date-fns": "^4.2.1",
     "next": "16.1.6",
     "next-sanity": "^12.1.5",
     "react": "19.2.3",

@@ -1,3 +1,6 @@
+import type { Image } from "sanity";
+import type { PortableTextBlock } from "next-sanity";
+
 export type HeroSection = {
   _id: string;
   headlineTitle: string;
@@ -23,6 +26,23 @@ export type AboutPage = {
     };
   };
 };
+
+export interface BlogPost {
+  _id: string;
+  title: string;
+  slug: string;
+  date: Date;
+  excerpt: string;
+  coverImage: CustomImage;
+}
+
+export interface CustomImage extends Image {
+  alt: string;
+}
+
+export interface FullPost extends BlogPost {
+  content: PortableTextBlock[];
+}
 
 export type OurApproachPage = {
   heading: string;
