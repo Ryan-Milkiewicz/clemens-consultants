@@ -4,7 +4,6 @@ import { getTop3BlogPosts } from "@/lib/queries";
 export default async function Blog() {
   const featuredPosts = await getTop3BlogPosts();
 
-  console.log("blogPosts:", JSON.stringify(featuredPosts, null, 2));
   return (
     <section className="flex flex-col items-center justify-center text-center px-4 py-16">
       <h6 className="text-lg font-semibold text-[#47a4a4] uppercase mb-2">

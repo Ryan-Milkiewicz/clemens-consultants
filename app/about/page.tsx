@@ -1,4 +1,4 @@
-import { client } from "@/lib/sanity";
+import { client, urlFor } from "@/lib/sanity";
 import { AboutPage } from "@/lib/types";
 import Image from "next/image";
 
@@ -22,10 +22,10 @@ export default async function About() {
       {/* Split Layout */}
       <div className="flex min-h-[600px] max-md:flex-col">
         {/* Left — Image */}
-        {data.image?.asset?.url && (
+        {data.image && (
           <div className="flex-none w-1/2 max-md:w-full max-md:h-64 relative">
             <Image
-              src={data.image.asset.url}
+              src={urlFor(data.image)}
               alt="About Clemens Consultants"
               fill
               className="object-cover"

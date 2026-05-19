@@ -6,7 +6,7 @@ export type HeroSection = {
   headlineTitle: string;
   subtitle: string;
   midlineText: string;
-  image: any;
+  image: CustomImage;
   primaryCta: {
     label: string;
     href: string;
@@ -20,11 +20,7 @@ export type HeroSection = {
 export type AboutPage = {
   heading: string;
   subheading?: string;
-  image?: {
-    asset: {
-      url: string;
-    };
-  };
+  image: CustomImage;
 };
 
 export interface BlogPost {
@@ -58,11 +54,7 @@ export type OurFirmPage = {
   subheading?: string;
   servicesList?: string[];
   closingStatement?: string;
-  image?: {
-    asset: {
-      url: string;
-    };
-  };
+  image?: CustomImage;
 };
 
 export type LeadershipPage = {
@@ -74,11 +66,7 @@ export type LeadershipPage = {
     bio?: string;
     experienceAreas?: string[];
     closingStatement?: string;
-    photo?: {
-      asset?: {
-        url?: string;
-      };
-    };
+    photo?: CustomImage;
   }[];
 };
 
@@ -88,7 +76,7 @@ export type ServicesPage = {
   sections: {
     title: string;
     description: string;
-    photo: any;
+    photo: CustomImage;
     includes: string;
     items: string[];
     closingStatement: string;

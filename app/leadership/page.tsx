@@ -1,4 +1,4 @@
-import { client } from "@/lib/sanity";
+import { client, urlFor } from "@/lib/sanity";
 import { LeadershipPage } from "@/lib/types";
 import Image from "next/image";
 
@@ -52,10 +52,11 @@ export default async function Leadership() {
             {member.photo?.asset?.url ? (
               <div className="flex-none w-48 h-56 relative rounded-lg overflow-hidden max-md:w-full max-md:h-56">
                 <Image
-                  src={member.photo.asset.url}
+                  src={urlFor(member.photo)}
                   alt={member.name}
                   fill
                   className="object-cover"
+                  priority
                 />
               </div>
             ) : (
