@@ -7,7 +7,6 @@ export default function IndustriesClient({ data }: { data: IndustrySection }) {
 
   return (
     <section className="bg-[#f4f5f7] px-20 py-16 max-md:px-6 max-md:py-10">
-      {/* Header */}
       <div className="flex items-start gap-12 mb-10 max-md:flex-col max-md:gap-5">
         <div className="flex-none max-w-sm">
           <p className="text-[#47a4a4] text-lg font-semibold tracking-widest uppercase mb-2">
@@ -25,7 +24,6 @@ export default function IndustriesClient({ data }: { data: IndustrySection }) {
         </div>
       </div>
 
-      {/* Panel */}
       <div className="flex rounded-xl overflow-hidden shadow-xl h-auto max-md:flex-col">
         <div className="bg-[#1e7db3] flex-none w-[38%] flex flex-col py-4 max-md:w-full">
           {data.sections.map((section, index) => (
@@ -45,7 +43,6 @@ export default function IndustriesClient({ data }: { data: IndustrySection }) {
           ))}
         </div>
 
-        {/* Inside Panel */}
         <div className="bg-white flex-1 flex flex-col justify-center px-14 py-12 max-md:px-6 max-md:py-8">
           {data.sections[active].photo && (
             <div className="text-6xl mb-4">{data.sections[active].photo}</div>

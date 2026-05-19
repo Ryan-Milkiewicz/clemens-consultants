@@ -1,5 +1,12 @@
 import { defineQuery } from "next-sanity";
-import { AboutPage, BlogPost, LeadershipPage, OurFirmPage } from "./types";
+import {
+  AboutPage,
+  BlogPost,
+  IndustrySection,
+  LeadershipPage,
+  OurApproachPage,
+  OurFirmPage,
+} from "./types";
 import { client } from "./sanity";
 
 export const contentOptions = { next: { revalidate: 3600 } };
@@ -66,6 +73,41 @@ export async function getLeadershipPageQuery() {
 
   return await client.fetch<LeadershipPage>(
     LEADERSHIP_QUERY,
+    {},
+    contentOptions,
+  );
+}
+
+export async function getOurApproachPageQuery() {
+  const OUR_APPROACH_QUERY = defineQuery(`*[_type == "our-approach"][0] {
+  heading,
+  subheading,
+  principles[] {
+    title,
+    description
+  }
+}`);
+
+  return await client.fetch<OurApproachPage>(
+    OUR_APPROACH_QUERY,
+    {},
+    contentOptions,
+  );
+}
+
+export async function getIndustryQuery() {
+  const INDUSTRY_QUERY = defineQuery(`*[_type == "industry-section"][0] {
+  heading,
+  subheading,
+  sections[] {
+    title,
+    description,
+    photo
+  }
+}`);
+
+  return await client.fetch<IndustrySection>(
+    INDUSTRY_QUERY,
     {},
     contentOptions,
   );
