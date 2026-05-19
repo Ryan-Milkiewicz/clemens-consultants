@@ -167,6 +167,11 @@ export const NAV_ITEMS = [
         href: "/about",
         links: [{ label: "Our Firm", href: "/about/our-firm" }],
       },
+      {
+        title: "About Firm",
+        href: "/about/our-firm",
+        links: [{ label: "Our Firm", href: "/about/our-firm" }],
+      },
     ],
   },
   {

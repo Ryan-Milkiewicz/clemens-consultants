@@ -16,7 +16,10 @@ const FOOTER_LINKS = [
   },
   {
     title: "About",
-    links: [{ label: "Our Firm", href: "/about" }],
+    links: [
+      { label: "About Clemens Consultants", href: "/about" },
+      { label: "Our Firm", href: "/about/our-firm" },
+    ],
   },
   {
     title: "Client Resources",
