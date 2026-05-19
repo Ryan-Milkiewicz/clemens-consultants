@@ -49,7 +49,7 @@ export default async function Leadership() {
             className="flex gap-10 bg-white rounded-xl shadow-sm p-8 max-md:flex-col max-md:gap-6"
           >
             {/* Photo */}
-            {member.photo?.asset?.url ? (
+            {member.photo ? (
               <div className="flex-none w-48 h-56 relative rounded-lg overflow-hidden max-md:w-full max-md:h-56">
                 <Image
                   src={urlFor(member.photo)}
