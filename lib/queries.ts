@@ -9,7 +9,7 @@ import {
 } from "./types";
 import { client } from "./sanity";
 
-export const contentOptions = { next: { revalidate: 3600 } };
+export const contentOptions = { next: { revalidate: 30 } };
 
 export async function getOurFirmQuery() {
   const OUR_FIRM_QUERY = defineQuery(`*[_type == "our-firm"][0] {
