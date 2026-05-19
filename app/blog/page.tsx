@@ -5,7 +5,6 @@ export default async function Page() {
   const posts = await getAllBlogPosts();
   return (
     <main className="min-h-screen bg-white">
-      {/* Header */}
       <section className="bg-[#1e3557] py-16 px-4 text-center">
         <h6 className="text-[#c8a96e] text-sm font-bold tracking-widest uppercase mb-3">
           Our Blog
@@ -20,7 +19,6 @@ export default async function Page() {
         </p>
       </section>
 
-      {/* Posts Grid */}
       <section className="max-w-6xl mx-auto px-4 py-16">
         {posts.length === 0 ? (
           <p className="text-center text-gray-500">No posts found.</p>
