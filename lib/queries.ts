@@ -74,6 +74,18 @@ export async function getBlogPost(slug: string) {
   );
 }
 
+export async function getAllBlogPosts() {
+  const GET_ALL_BLOG_POSTS_QUERY = defineQuery(`
+*[_type == 'blogPosts']| order(date desc){ _id, title, excerpt, "slug":slug.current, date }
+`);
+
+  return await client.fetch<BlogPost[]>(
+    GET_ALL_BLOG_POSTS_QUERY,
+    {},
+    contentOptions,
+  );
+}
+
 export async function getLeadershipPageQuery() {
   const LEADERSHIP_QUERY = defineQuery(`*[_type == "leadership"][0] {
   pageTitle,

@@ -6,17 +6,19 @@ import { urlFor } from "../../../lib/sanity";
 
 export default function BlogCard({ post }: { post: BlogPost }) {
   return (
-    <div className="max-w-md bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
-      <div className="relative w-full h-48">
-        <Image
-          src={urlFor(post.coverImage)}
-          alt={post.coverImage.alt}
-          fill
-          style={{ objectFit: "cover" }}
-          sizes="(max-width: 768px) 100vw, 400px"
-          priority
-        />
-      </div>
+    <div className="bg-white rounded-lg overflow-hidden flex flex-col border border-gray-200 shadow-[0_4px_20px_rgba(30,53,87,0.12)] hover:shadow-[0_8px_30px_rgba(30,53,87,0.2)] transition-shadow">
+      {post.coverImage && (
+        <div className="relative w-full h-48">
+          <Image
+            src={urlFor(post.coverImage)}
+            alt={post.coverImage.alt}
+            fill
+            style={{ objectFit: "cover" }}
+            sizes="(max-width: 768px) 100vw, 400px"
+            priority
+          />
+        </div>
+      )}
       <div className="p-4 flex-1">
         <h3 className="text-xl font-semibold text-[#1e3557] mb-2">
           {post.title}
