@@ -2,6 +2,7 @@ import { defineQuery } from "next-sanity";
 import {
   AboutPage,
   BlogPost,
+  FullPost,
   IndustrySection,
   LeadershipPage,
   OurApproachPage,
@@ -50,6 +51,25 @@ export async function getTop3BlogPosts() {
   return await client.fetch<BlogPost[]>(
     LATEST_BLOG_POSTS_QUERY,
     {},
+    contentOptions,
+  );
+}
+
+export async function getBlogPost(slug: string) {
+  const GET_BLOG_POST_QUERY = defineQuery(`
+  *[_type == "blogPosts" && slug.current == $slug][0]{
+    _id,
+    title,
+    "slug": slug.current,
+    coverImage,
+    content,
+    date
+  }
+`);
+
+  return await client.fetch<FullPost>(
+    GET_BLOG_POST_QUERY,
+    { slug },
     contentOptions,
   );
 }
