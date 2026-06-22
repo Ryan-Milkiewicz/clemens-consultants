@@ -18,6 +18,16 @@ export const metadata = {
   title: "Clemens Consultants - Expert Accounting & Financial Services",
   description:
     "Clemens Consultants provides expert accounting and financial services for businesses in the Capital District",
+  keywords: [
+    "audit",
+    "tax",
+    "advisory",
+    "assurance",
+    "accounting",
+    "financial services",
+    "Capital District",
+    "Clemens Consultants",
+  ],
   openGraph: {
     title: "Clemens Consultants - Expert Accounting & Financial Services",
     description:
