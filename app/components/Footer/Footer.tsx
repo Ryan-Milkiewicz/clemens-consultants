@@ -215,7 +215,7 @@ export default function Footer() {
                 Office
               </p>
               <p className="text-white text-sm font-semibold">
-                54 1st Dyke Rd Unit 2, Averill Park, NY 12018
+                122 1st Dyke Rd, Averill Park, NY 12018
               </p>
             </div>
           </div>

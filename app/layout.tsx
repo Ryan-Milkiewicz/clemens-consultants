@@ -61,7 +61,7 @@ export default function RootLayout({
       "Clemens Consultants provides expert accounting and financial services for businesses in the Capital District",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "54 First Dyke Road, Unit 2",
+      streetAddress: "122 1st Dyke Rd",
       addressLocality: "Averill Park",
       addressRegion: "NY",
       postalCode: "12018",

@@ -54,9 +54,9 @@ export const NAV_ITEMS = [
       },
     ],
   },
-  {
-    label: "Blog",
-    href: "/blog",
-    sections: [],
-  },
+  // {
+  //   label: "Blog",
+  //   href: "/blog",
+  //   sections: [],
+  // },
 ];
