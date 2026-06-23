@@ -88,7 +88,7 @@ export default function Navbar() {
                 href={item.href}
                 className={`tbg-nav-trigger${activeMenu === item.label ? " active" : ""}`}
                 aria-expanded={activeMenu === item.label}
-                onClick={(e) => {
+                onClick={() => {
                   if (item.sections?.length) {
                     // allow navigation, just close the menu
                     setActiveMenu(null);
@@ -183,9 +183,9 @@ export default function Navbar() {
                 <div className="bg-black/20 pb-4">
                   {item.sections.map((section) => (
                     <div key={section.title}>
-                      <div className="text-[#c8a96e] text-[11px] font-bold tracking-widest uppercase px-6 pt-3 pb-1.5">
+                      {/* <div className="text-[#c8a96e] text-[11px] font-bold tracking-widest uppercase px-6 pt-3 pb-1.5">
                         {section.title}
-                      </div>
+                      </div> */}
                       <Link
                         href={section.href}
                         className="block text-white/75 text-sm px-8 py-1.5 hover:text-white transition-colors font-semibold"

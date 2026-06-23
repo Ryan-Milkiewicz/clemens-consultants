@@ -1,7 +1,7 @@
 export const NAV_ITEMS = [
   {
     label: "Services",
-    href: "/services",
+    href: "/",
     description:
       "We provide tailor-made solutions to meet the unique needs of your business.",
     sections: [
