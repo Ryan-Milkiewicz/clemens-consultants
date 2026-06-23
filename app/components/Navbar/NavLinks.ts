@@ -7,19 +7,19 @@ export const NAV_ITEMS = [
     sections: [
       {
         title: "Tax Preparation and Planning",
-        href: "/services/advisory-consulting",
+        href: "/",
       },
       {
         title: "Business Advisory & Consulting",
-        href: "/services/small-business-advisory",
+        href: "/",
       },
       {
         title: "Audit & Assurance Services",
-        href: "/services/assurance",
+        href: "/",
       },
       {
         title: "Financial Statement Preparation",
-        href: "/services/tax",
+        href: "/",
       },
     ],
   },

@@ -188,10 +188,10 @@ export default function Navbar() {
                       </div> */}
                       <Link
                         href={section.href}
-                        className="block text-white/75 text-sm px-8 py-1.5 hover:text-white transition-colors font-semibold"
+                        className="block text-[#c8a96e] text-sm px-8 py-1.5 hover:text-white transition-colors font-semibold"
                         onClick={() => setMobileOpen(false)}
                       >
-                        {section.title} Overview
+                        {section.title}
                       </Link>
                     </div>
                   ))}
